@@ -184,6 +184,232 @@ nav {
             font-weight: 700;
         }
     }
+
+    .myplan-box-section {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        #parentTabs {
+            margin-bottom: 24px;
+            border: none;
+            display: flex;
+            justify-content: center;
+            .nav-link {
+                width: 340px;
+                height: 44px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 4px;
+                padding: 8px;
+                color: #ffffff;
+                border: 1px solid #006bcd;
+                transition: all 0.3s ease;
+                margin: 0px 4px;
+                img {
+                    transition: opacity 0.5s ease-in-out;
+                    opacity: 1 !important;
+                }
+            }
+            .nav-link.active {
+                background-color: #006bcd;
+            }
+            .nav-link.active img.whitecolor {
+                filter: brightness(0) invert(1);
+            }
+            .nav-link.active img.shopifyimg {
+                filter: brightness(0) invert(1);
+            }
+
+            .text-light {
+                --bs-text-opacity: 1;
+                color: rgba(var(--bs-light-rgb), var(--bs-text-opacity)) !important;
+                font-weight: bolder;
+            }
+        }
+
+        .childTabs {
+            .nav-tabs {
+                border: none;
+                border-radius: 0px;
+                .nav-item {
+                    width: 390px;
+                    text-align: center;
+                }
+                .nav-link {
+                    height: 42px !important;
+                    font-size: 14px !important;
+                    font-weight: 600;
+                    border: 0.91px solid rgb(0, 107, 205);
+                    border-radius: 4px;
+                    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.09);
+                }
+                .nav-link.active {
+                    color: #fff;
+                    background-color: rgb(0, 107, 205);
+                }
+            }
+        }
+
+        .align-items-end {
+            align-items: flex-end !important;
+            .myplan-box {
+                display: none;
+            }
+        }
+        .domain-box {
+            text-align: center;
+            p {
+                color: #006bcd;
+                font-weight: bold;
+                font-size: 30px;
+                margin-bottom: 14px;
+                .choose-domainbox {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 15px;
+                    .form-check-inline {
+                        display: flex;
+                        justify-content: center;
+                        align-items: end;
+                        flex-direction: column;
+                        .form-check-input {
+                            border-radius: 50% !important;
+                            width: 35px;
+                            height: 35px;
+                            cursor: pointer;
+                            outline: none;
+                        }
+                        .form-check-label {
+                            font-size: 40px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .pricingcard-wholebox {
+        .card {
+            border-radius: 16px;
+            border-top: 5px solid var(--Banner-Blue, #006bcd);
+            background: var(--Pure-White, #fff);
+            box-shadow:
+                4px 4px 8px 0px rgba(0, 0, 0, 0.2),
+                0px 0px 4px 0px rgba(0, 0, 0, 0.16);
+            text-align: center;
+            position: relative;
+            margin-bottom: 40px;
+            z-index: 1;
+            .card-body {
+                padding: 24px 0px;
+                text-align: center;
+                .dynamicprice_box {
+                    text-align: center;
+                    padding: 0px 24px !important;
+                    margin: 5px 0;
+                    .card-title {
+                        text-align: left;
+                        color: rgb(0, 107, 205);
+                        font-size: 28px;
+                        font-style: normal;
+                        font-weight: normal;
+                        line-height: 46px;
+                    }
+                    .plan_summ {
+                        background: #d7f2ff;
+                        font-size: 15px;
+                        border-radius: 12px;
+                        border-left: 5px solid #006bcd;
+                        font-size: 14px !important;
+                        line-height: 22px !important;
+                    }
+                    .card-price {
+                        justify-content: flex-start !important;
+                        text-align: left;
+                        font-size: 36px !important;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 38px;
+                        color: #006bcd;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-end;
+                        margin-top: 36px;
+                        span {
+                            font-size: 20px;
+                        }
+                        .offer-price {
+                            font-size: 18px !important;
+                            font-weight: 600;
+                            line-height: 10px;
+                            padding-left: 16px !important;
+                            color: #07bb4f;
+                            left: 0 !important;
+                            right: 0 !important;
+                            margin: 0px !important;
+                            position: relative !important;
+                            top: -13px !important;
+                        }
+                    }
+                    .slash-price {
+                        font-size: 16px;
+                        font-style: normal;
+                        line-height: 24px;
+                        color: #2a2d2f;
+                        display: flex;
+                        font-weight: bold;
+                        margin: 12px 0px 10px;
+                        span {
+                            text-decoration: line-through;
+                            color: #8d9094;
+                            display: block;
+                            margin-left: 8px;
+                        }
+                    }
+                    .getstarted-btn, .contactus {
+                        text-align: center;
+                        margin: 3px 0;
+                        .common-btn {
+                            width: 100%;
+                            height: 44px;
+                            font-size: 18px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 28px;
+                            color: #fff;
+                            border-radius: 4px;
+                            border: 1px solid #006bcd;
+                            background-color: #006bcd;
+                            transition: all 0.3s ease;
+                        }
+                    }
+                }
+                .features-link {
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    a {
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 22px;
+                        color: #8d9094;
+                        margin: 10px 0px 20px;
+                        display: block;
+                        border-bottom: 1px solid;
+                        display: table;
+                        text-decoration: none;
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .woocommerce-container {
@@ -231,8 +457,8 @@ nav {
             display: inline-block;
             font-weight: 600;
             a {
-                color: #222D39;
-                background-color: rgba(225, 232, 242, 0.7019607843);;
+                color: #222d39;
+                background-color: rgba(225, 232, 242, 0.7019607843);
                 padding: 6px 12px;
                 border-radius: 3px;
                 text-decoration: none;

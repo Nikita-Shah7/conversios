@@ -13,7 +13,13 @@
 
             <div class="col-md-6">
                 <h5>Contact Us</h5>
-                <form action="#" method="POST">
+                <!-- <?php
+                echo esc_url(admin_url('admin-post.php')); // http://localhost/wordpress-custom/wp-admin/admin-post.php
+                ?> -->
+                <!-- <form action="#" method="POST"> -->
+                    <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="POST">
+                    <!-- This tells WordPress that when the form is submitted, it should trigger the save_contact_form function. -->
+                    <input type="hidden" name="action" value="save_contact_us_form">
                     <div class="mb-3">
                         <label for="name" class="form-label">Name</label>
                         <input type="text" class="form-control" id="name" name="name" required>
@@ -37,21 +43,24 @@
 <button type="button" id="scrollToTopBtn" class="scroll-to-top-btn">↑</button>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    document.addEventListener("DOMContentLoaded", function() {
+        let scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-    window.addEventListener("scroll", function() {
-        if (window.scrollY > 300) {
-            scrollToTopBtn.style.display = "block";
-        } else {
-            scrollToTopBtn.style.display = "none";
-        }
-    });
+        window.addEventListener("scroll", function() {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        });
 
-    scrollToTopBtn.addEventListener("click", function() {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        scrollToTopBtn.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
     });
-});
 </script>
 
 

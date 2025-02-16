@@ -95,13 +95,16 @@ function save_contact_us_form() {
             'message' => sanitize_textarea_field($_POST['message']),
             'created_at' => current_time('mysql')
         ]);
+    } else {
+        echo "Fill up the required fields!!";
     }
-    // wp_redirect(home_url()); // Redirect after submission
+    // This prevents the form from being resubmitted if the user refreshes the page.
+    wp_redirect(home_url()); // Redirect after submission
     exit;
 }
 
-// add_action('admin_post_save_contact_us_form', 'save_contact_us_form');
-// add_action('admin_post_nopriv_save_contact_us_form', 'save_contact_us_form'); // Allow non-logged-in users
+add_action('admin_post_save_contact_us_form', 'save_contact_us_form');
+add_action('admin_post_nopriv_save_contact_us_form', 'save_contact_us_form'); // Allow non-logged-in users
 
 
 //  Create the Database Table
@@ -121,6 +124,6 @@ function create_contact_us_table() {
     require_once ABSPATH . 'wp-admin/includes/upgrade.php';
     dbDelta($sql);
 }
-// add_action('after_setup_theme', 'create_contact_us_table');
+add_action('after_setup_theme', 'create_contact_us_table');
 
 ?>
